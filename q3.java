@@ -1,0 +1,31 @@
+class q3<T, V> {
+    T ob1;
+    V ob2;
+    q3(T o1, V o2) {
+    ob1 = o1;
+    ob2 = o2;
+    }
+    void showTypes() {
+    System.out.println("Type of T is " + ob1.getClass().getName());
+    System.out.println("Type of V is " + ob2.getClass().getName());
+    }
+    T getob1() {
+    return ob1;
+    }
+    V getob2() {
+    return ob2;
+    }
+    }
+    // Demonstrate TwoGen.
+    class TwoParameterTypeGenerics {
+    public static void main(String args[]) {
+    q3<Integer, String> tgObj = new q3<Integer, String>(88, "Generics");
+    // Show the types.
+    tgObj.showTypes();
+    // Obtain and show values.
+    int v = tgObj.getob1();
+    System.out.println("value: " + v);
+    String str = tgObj.getob2();
+    System.out.println("value: " + str);
+    }
+    }
